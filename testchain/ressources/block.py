@@ -13,5 +13,5 @@ class Block:
         sha.update(str(self.index) + 
                 str(self.timestamp) +
                 str(self.data) +
-                str(self.previous_hash))
+                str(self.previous_hash).encode())
         return sha.hexdigest()
