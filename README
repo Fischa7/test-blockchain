@@ -8,7 +8,7 @@ To test this blockchain run the server file.
 
 afterwards use the following commands to send transactions / mine a block / display all blocks.
 
-- curl "localhost:5000/txion -H "Content-Type: application/json" -d '{"from": "Johnny", "to": "Thommy", "amount": 7}'
+- curl "localhost:5000/txion" -H "Content-Type: application/json" -d '{"from": "Johnny", "to": "Thommy", "amount": 7}'
 
 - curl localhost:5000/mine
 
