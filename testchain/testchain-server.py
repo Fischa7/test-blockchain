@@ -22,7 +22,7 @@ miner_address = "7xnh37inc7reyopc4rvik8kqfvd7g3se"
 blockchain = []
 blockchain.append(create_genesis_block())
 # Store the transactions of this node
-this_nodes_transaction = []
+this_nodes_transactions = []
 # Store the url data of every other node in the network so that we can communicate with them
 peer_nodes = []
 # are we mining or not?
@@ -34,8 +34,8 @@ def transaction():
     new_txion = request.get_json()
     this_nodes_transactions.append(new_txion)
     print("New transaction")
-    print("FROM: " + new_txion['from'].encode('ascii','replace'))
-    print("TO: " + new_txion['to'].encode('ascii','replace'))
+    print("FROM: " + str(new_txion['from']))
+    print("TO: " + str(new_txion['to']))
     print("AMOUNT: " + new_txion['amount'])
     # let the client know the transaction was successful
     return "Transaction successful\n"
@@ -125,4 +125,4 @@ def mine():
         "hash": last_block_hash
     })
 
-    node.run()
+node.run()
