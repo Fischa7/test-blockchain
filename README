@@ -1,3 +1,17 @@
-This is a small test blockchain for experimentation.
+This is a small test blockchain for experimentation purposes.
 
-This is a port of snakecoin. All credits to @aunyks.
+This is a python3 port of snakecoin. Credits to @aunyks.
+
+------------------------------------------------------------
+
+To test this blockchain run the server file.
+
+afterwards use the following commands to send transactions / mine a block / display all blocks.
+
+- curl "localhost:5000/txion -H "Content-Type: application/json" -d '{"from": "Johnny", "to": "Thommy", "amount": 7}'
+
+- curl localhost:5000/mine
+
+- curl localhost:5000/blocks
+
+
