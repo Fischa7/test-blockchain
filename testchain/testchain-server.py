@@ -36,7 +36,7 @@ def transaction():
     print("New transaction")
     print("FROM: " + str(new_txion['from']))
     print("TO: " + str(new_txion['to']))
-    print("AMOUNT: " + new_txion['amount'])
+    print("AMOUNT: " + str(new_txion['amount']))
     # let the client know the transaction was successful
     return "Transaction successful\n"
 
